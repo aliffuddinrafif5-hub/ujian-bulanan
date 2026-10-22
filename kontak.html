@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak - Futsalzone</title>
+    <meta name="description" content="Temukan sepatu futsal terbaik dengan harga yang terjangkau">
+    <meta name="keywords" content="sepatu futsal">
+    <meta name="author" content="aliffuddin adilla rafif">
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- FontAwesome (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navigasi utama">
+            <a href="index.html" class="navbar-logo"><i class="fa-solid fa-shoe-prints"></i> Futsalzone</a>
+            <ul class="nav-list">
+                <li><a href="index.html"><i class="fa-solid fa-house"></i> beranda</a></li>
+                <li><a href="produk.html"><i class="fa-solid fa-list"></i> katalog</a></li>
+                <li><a href="kontak.html" class="active" aria-current="page"><i class="fa-solid fa-envelope"></i> kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section">
+        <h1 class="section-title"><i class="fa-solid fa-headset"></i>Hubungi kami</h1>
+        <ul class="info-list contact-list">
+            <li class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <span class="label">email</span>
+                <a href="mailto:Futsalzone@gmail.com">Futsalzone@gmail.com</a>
+            </li>
+            <li class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <span class="label">no-telp</span>
+                <a href="tel:081000000000">081000000000</a>
+            </li>
+            <li class="contact-item">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="label">instagram</span>
+                <a href="https://www.instagram.com/Futsalzone.id" target="_blank" rel="noopener">Futsalzone.id</a>
+            </li>
+            <li class="contact-item">
+                <i class="fa-brands fa-tiktok"></i>
+                <span class="label">tiktok</span>
+                <a href="https://www.tiktok.com/@Futsalzone.id" target="_blank" rel="noopener">Futsalzone.id</a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2 class="section-title"><i class="fa-solid fa-clipboard-list"></i>Formulir Pemesanan</h2>
+        <form action="#" method="post" class="contact-form">
+            <fieldset>
+                <legend><i class="fa-solid fa-user"></i> Data Pribadi</legend>
+
+                <label for="nama">Nama Lengkap:</label><br>
+                <input type="text" id="nama" name="nama" placeholder="nama lengkap" required>
+                <br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="email@gmail.com" required>
+                <br><br>
+
+                <label for="telepon">Nomor Telepon:</label><br>
+                <input type="tel" id="telepon" name="telepon" placeholder="081000000000" required>
+                <br><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" placeholder="12345678" minlength="8" required>
+                <br><br>
+
+                <label for="tanggal">Tanggal Lahir:</label><br>
+                <input type="date" id="tanggal" name="tanggal">
+                <br><br>
+
+                <label for="kodepos">Kode Pos:</label><br>
+                <input type="number" id="kodepos" name="kodepos">
+                <br><br>
+
+                <label for="kota">Pilihan Kota:</label><br>
+                <select id="kota" name="kota">
+                    <option value="">-- Pilih Kota --</option>
+                    <option value="jakarta">Jakarta</option>
+                    <option value="bandung">Bandung</option>
+                    <option value="semarang">Semarang</option>
+                    <option value="yogyakarta">Yogyakarta</option>
+                    <option value="surabaya">Surabaya</option>
+                </select>
+                <br><br>
+
+                <p>Jenis Kelamin:</p>
+                <input type="radio" id="laki" name="gender" value="Laki-laki">
+                <label for="laki">Laki-laki</label>
+
+                <input type="radio" id="perempuan" name="gender" value="Perempuan">
+                <label for="perempuan">Perempuan</label>
+            </fieldset>
+
+            <fieldset>
+                <legend><i class="fa-solid fa-circle-info"></i> Informasi Tambahan</legend>
+
+                <label for="pesan">Pesan Tambahan:</label><br>
+                <textarea id="pesan" name="pesan" rows="4" cols="40"></textarea>
+                <br><br>
+
+                <input type="checkbox" id="persetujuan" name="persetujuan" required>
+                <label for="persetujuan">Saya menyetujui persyaratan tersebut</label>
+                <br><br>
+
+                <input type="submit" value="Kirim">
+            </fieldset>
+        </form>
+    </section>
+
+    <footer><i class="fa-regular fa-copyright"></i>Futsalzone 2026. Semua hak cipta dilindungi.</footer>
+</body>
+</html>

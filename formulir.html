@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700&family=Barlow:wght@400;500;600&display=swap");
+
+:root {
+    --court: #11503c;
+    --court-deep: #0b3a2b;
+    --paper: #fbfcfa;
+    --ink: #12261e;
+    --muted: #55675e;
+    --rule: #cfd9d2;
+    --ball: #f26a1b;
+    --ball-dark: #cf560f;
+    --error: #b42318;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    font-family: "Barlow", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--ink);
+    background: var(--court-deep);
+}
+
+/* ===== Kartu formulir ===== */
+.section {
+    width: 100%;
+    max-width: 420px;
+    background: var(--paper);
+    border-top: 8px solid var(--court);
+    border-radius: 6px;
+    padding: 32px 28px 30px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .35);
+}
+
+.section h1 {
+    font-family: "Barlow Condensed", "Arial Narrow", Impact, sans-serif;
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--court);
+    text-transform: capitalize;
+    margin-bottom: 8px;
+}
+
+.section p {
+    color: var(--muted);
+    margin-bottom: 24px;
+    text-transform: capitalize;
+}
+
+/* ===== Label & input ===== */
+.section label {
+    display: block;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 6px;
+}
+
+.section input[type="email"],
+.section input[type="password"],
+.section input[type="text"] {
+    display: block;
+    width: 100%;
+    font: inherit;
+    color: var(--ink);
+    background: #fff;
+    padding: 12px 14px;
+    margin-bottom: 18px;
+    border: 1.5px solid var(--rule);
+    border-radius: 4px;
+    transition: border-color .15s, box-shadow .15s;
+}
+
+.section input::placeholder { color: #8a9a91; }
+
+.section input[type="email"]:hover,
+.section input[type="password"]:hover { border-color: #9db3a6; }
+
+.section input[type="email"]:focus-visible,
+.section input[type="password"]:focus-visible {
+    outline: none;
+    border-color: var(--court);
+    box-shadow: 0 0 0 3px rgba(17, 114, 225, 0.25);
+}
+
+/* Merah setelah pengguna selesai mengisi dan isinya salah */
+.section input[type="email"]:user-invalid,
+.section input[type="password"]:user-invalid {
+    border-color: var(--error);
+    box-shadow: 0 0 0 3px rgba(48, 16, 207, 0.15);
+}
+
+/* ===== Tombol kirim ===== */
+.section input[type="submit"] {
+    display: block;
+    width: 100%;
+    font: inherit;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #fff;
+    background: var(--ball);
+    padding: 13px 20px;
+    margin-top: 6px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .15s;
+}
+.section input[type="submit"]:hover { background: var(--ball-dark); }
+.section input[type="submit"]:focus-visible {
+    outline: 3px solid rgba(13, 85, 201, 0.45);
+    outline-offset: 2px;
+}
+
+/* ===== HP ===== */
+@media (max-width: 480px) {
+    body { padding: 0; align-items: flex-start; }
+    .section { border-radius: 0; min-height: 100vh; padding: 28px 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}</style>
+</head>
+<body>
+    <!--form pendaftaran-->
+    <section class="section">
+        <h1>formulir pendaftaran</h1>
+        <p>isi formulir pendaftaran</p>
+        <label>email</label>
+        <input type="email" id="email" nama="email" placeholder="email@gmail.com" required>
+        <label>password</label>
+        <input type="password" id="password" nama="password" placeholder="1234" required>
+        <input type="submit" value="kirim">
+    </section>
+</body>
+</html>
